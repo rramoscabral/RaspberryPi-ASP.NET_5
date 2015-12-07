@@ -8,7 +8,7 @@ The following instructions were made using a Microsoft Windows operating system,
 Image used: MINImal raspBIAN image for Raspberry Pi (2015-11-12)
 https://minibianpi.wordpress.com/download/
    - Raspbian “Jessie” based
-   - Kernel 4.1.7+ #817
+   - Kernel 4.1.7+ \#817
    - 14 secs boot (on RPi 2B)
    - 29 MB RAM used
    - 451 MB disk space used
@@ -36,8 +36,8 @@ Password: raspberry
 
 First configure the operating system to use all SD card space. You must first install the Raspi-config:
 
-# apt-get update
-# apt-get install raspi-config
+\# apt-get update
+\# apt-get install raspi-config
 
 With raspi-config installed can run the same:
 
@@ -55,41 +55,41 @@ It is recommended to all installation and setup in the temporary area:
 
 Update certificates:
 
-# certmgr -ssl -m https://go.microsoft.com
-# certmgr -ssl -m https://nugetgallery.blob.core.windows.net
-# certmgr -ssl -m https://nuget.org
-# certmgr -ssl -m https://www.myget.org/F/aspnetvnext/
-# mozroots --import --machine --sync
+\# certmgr -ssl -m https://go.microsoft.com
+\# certmgr -ssl -m https://nugetgallery.blob.core.windows.net
+\# certmgr -ssl -m https://nuget.org
+\# certmgr -ssl -m https://www.myget.org/F/aspnetvnext/
+\# mozroots --import --machine --sync
 
 Now install ASP.NET 5 RC:
 
-# apt-get update
-# apt-get upgrade
-# apt-get install curl
-# apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 3FA7E0328081BFF6A14DA29AA6A19B38D3D831EF
-# echo "deb http://download.mono-project.com/repo/debian wheezy main" | tee /etc/apt/sources.list.d/mono-xamarin.list
-# apt-get install mono-complete
-# apt-get install ca-certificates-mono
-# apt-get install libunwind8 gettext libssl-dev libcurl4-openssl-dev zlib1g libicu-dev uuid-dev unzip
-# curl -sSL https://raw.githubusercontent.com/aspnet/Home/dev/dnvminstall.sh | DNX_BRANCH=dev sh && source ~/.dnx/dnvm/dnvm.sh
+\# apt-get update
+\# apt-get upgrade
+\# apt-get install curl
+\# apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 3FA7E0328081BFF6A14DA29AA6A19B38D3D831EF
+\# echo "deb http://download.mono-project.com/repo/debian wheezy main" | tee /etc/apt/sources.list.d/mono-xamarin.list
+\# apt-get install mono-complete
+\# apt-get install ca-certificates-mono
+\# apt-get install libunwind8 gettext libssl-dev libcurl4-openssl-dev zlib1g libicu-dev uuid-dev unzip
+\# curl -sSL https://raw.githubusercontent.com/aspnet/Home/dev/dnvminstall.sh | DNX_BRANCH=dev sh && source ~/.dnx/dnvm/dnvm.sh
 
 Now install the libuv for Kestrel
 Libuv is a multi-platform asynchronous IO library that is used by Kestrel, a cross-platform HTTP server for hosting ASP.NET 5 web applications.
 
-# apt-get install make automake libtool curl
-# curl -sSL https://github.com/libuv/libuv/archive/v1.4.2.tar.gz | tar zxfv - -C /usr/local/src
-# cd /usr/local/src/libuv-1.4.2
-# sh autogen.sh
-# ./configure
-# make
-# make install
-# rm -rf /usr/local/src/libuv-1.4.2 && cd ~/
-# ldconfig
-# cd /tmp
+\# apt-get install make automake libtool curl
+\# curl -sSL https://github.com/libuv/libuv/archive/v1.4.2.tar.gz | tar zxfv - -C /usr/local/src
+\# cd /usr/local/src/libuv-1.4.2
+\# sh autogen.sh
+\# ./configure
+\# make
+\# make install
+\# rm -rf /usr/local/src/libuv-1.4.2 && cd ~/
+\# ldconfig
+\# cd /tmp
 
 You can check the .NET Version Manager with the command
 
-# dnvm
+\# dnvm
 
 ----------------------- Information on the screen -----------------------
     ___  _  ___   ____  ___
@@ -115,13 +115,13 @@ Use dnvm [help|-h|-help|--help]  to display help text.
 
 Now install the latest stable version of DNX (.NET Execution Environment).
 
-# dnvm install latest -r coreclr -g
-# dnvm upgrade -r mono
+\# dnvm install latest -r coreclr -g
+\# dnvm upgrade -r mono
 
 
 You can see the currently installed DNX versions with dnvm list:
 
-# dnvm list
+\# dnvm list
 
 ----------------------- Information on the screen -----------------------
 
@@ -134,35 +134,35 @@ Active Version              Runtime Architecture OperatingSystem Alias
 
 If you want to change the runtime:
 
-# dnvm use 1.0.0-rc1-update1 -r mono
+\# dnvm use 1.0.0-rc1-update1 -r mono
 
 If you want to setting default:
 
-# dnvm alias default 1.0.0-rc1-update1 -r mono
+\# dnvm alias default 1.0.0-rc1-update1 -r mono
 
 
 Experiment with the demonstration project available on GitHub.
 
-# apt-get install git
-# cd /tmp
-# git clone https://github.com/aspnet/Home.git
-# cd Home/samples/latest/HelloWeb
+\# apt-get install git
+\# cd /tmp
+\# git clone https://github.com/aspnet/Home.git
+\# cd Home/samples/latest/HelloWeb
 
 Clears the package cache.
-# clear-http-cache
+\# clear-http-cache
 
 Restore packages for app based on  project.json:
-# dnu restore
+\# dnu restore
 
 Build 
-# dnu build
+\# dnu build
 
 Command to launch the web application:
-# dnx run
+\# dnx run
 
 ----------------------- Information on the screen -----------------------
 
-root@minibian:/tmp/Home/samples/1.0.0-rc1-update1/HelloWeb# dnx web
+root@minibian:/tmp/Home/samples/1.0.0-rc1-update1/HelloWeb\# dnx web
 Hosting environment: Production
 Now listening on: http://*:5004
 Application started. Press Ctrl+C to shut down.
