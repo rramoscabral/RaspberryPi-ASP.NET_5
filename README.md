@@ -41,17 +41,17 @@ First configure the operating system to use all SD card space. You must first in
 
 With raspi-config installed can run the same:
 
-# raspi-config
+\# raspi-config
 
 elect the "Expand Filesystem" option. You will be informed that the file system has been changed and select "OK" and then "Finish" will be asked whether to restart select "YES".
 
 With the Raspberry restarted start the session with the Root and check the address of the local ip address in order to connect through ssh with PuTTY (http://www.chiark.greenend.org.uk/~sgtatham/putty/) that is an SSH client, and make all operations remotely. You can also check the IP address when the Raspberry starts.
 
-#ifconfig eth0
+\#ifconfig eth0
 
 It is recommended to all installation and setup in the temporary area:
 
-# cd /tmp
+\# cd /tmp
 
 Update certificates:
 
