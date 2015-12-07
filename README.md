@@ -78,14 +78,23 @@ Now install the libuv for Kestrel
 Libuv is a multi-platform asynchronous IO library that is used by Kestrel, a cross-platform HTTP server for hosting ASP.NET 5 web applications.
 
 \# apt-get install make automake libtool curl
+
 \# curl -sSL https://github.com/libuv/libuv/archive/v1.4.2.tar.gz | tar zxfv - -C /usr/local/src
+
 \# cd /usr/local/src/libuv-1.4.2
+
 \# sh autogen.sh
+
 \# ./configure
+
 \# make
+
 \# make install
+
 \# rm -rf /usr/local/src/libuv-1.4.2 && cd ~/
+
 \# ldconfig
+
 \# cd /tmp
 
 You can check the .NET Version Manager with the command
@@ -117,6 +126,7 @@ Use dnvm [help|-h|-help|--help]  to display help text.
 Now install the latest stable version of DNX (.NET Execution Environment).
 
 \# dnvm install latest -r coreclr -g
+
 \# dnvm upgrade -r mono
 
 
@@ -145,8 +155,11 @@ If you want to setting default:
 Experiment with the demonstration project available on GitHub.
 
 \# apt-get install git
+
 \# cd /tmp
+
 \# git clone https://github.com/aspnet/Home.git
+
 \# cd Home/samples/latest/HelloWeb
 
 Clears the package cache.
