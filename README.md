@@ -121,6 +121,7 @@ $ dnvm
 >
 > Use dnvm [help|-h|-help|--help]  to display help text.
 >
+
 -------------------- End of Information on screen --------------------
 
 Now install the latest stable version of DNX (.NET Execution Environment).
@@ -142,6 +143,7 @@ $ dnvm list
 >        1.0.0-rc1-update1    coreclr x64          linux
 > 
 > 
+
 -------------------- End of Information on screen --------------------
 
 If you want to change the runtime:
@@ -190,6 +192,7 @@ $ dnx run
 > Now listening on: http://*:5004
 > Application started. Press Ctrl+C to shut down.
 >
+
 -------------------- End of Information on screen --------------------
 
 Now you can experience in your web browser to the IP address of the Raspberry Pi and the port that is listening for example http://192.168.1.68:5004/.
