@@ -56,13 +56,9 @@ It is recommended to all installation and setup in the temporary area:
 Update certificates:
 
 \# certmgr -ssl -m https://go.microsoft.com
-
 \# certmgr -ssl -m https://nugetgallery.blob.core.windows.net
-
 \# certmgr -ssl -m https://nuget.org
-
 \# certmgr -ssl -m https://www.myget.org/F/aspnetvnext/
-
 \# mozroots --import --machine --sync
 
 
