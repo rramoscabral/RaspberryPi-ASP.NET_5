@@ -67,7 +67,7 @@ $ certmgr -ssl -m https://www.myget.org/F/aspnetvnext/
 $ mozroots --import --machine --sync
 ```
 
-Now install ASP.NET 5 RC:
+Now install ASP.NET 5 Release Candidate:
 ```sh
 $ apt-get update
 $ apt-get upgrade
@@ -101,7 +101,11 @@ You can check the .NET Version Manager with the command
 $ dnvm
 ```
 
------------------------ Information on the screen -----------------------
+---
+
+***Information on the screen***
+
+```
 >     ___  _  ___   ____  ___
 >    / _ \/ |/ / | / /  |/  /
 >   / // /    /| |/ / /|_/ /
@@ -121,8 +125,10 @@ $ dnvm
 >
 > Use dnvm [help|-h|-help|--help]  to display help text.
 >
+```
 
--------------------- End of Information on screen --------------------
+---
+
 
 Now install the latest stable version of DNX (.NET Execution Environment).
 ```sh
@@ -135,7 +141,9 @@ You can see the currently installed DNX versions with dnvm list:
 $ dnvm list
 ```
 
------------------------ Information on the screen -----------------------
+***Information on the screen***
+
+```
 >
 > Active Version              Runtime Architecture OperatingSystem Alias
 > ------ -------              ------- ------------ --------------- -----
@@ -143,8 +151,7 @@ $ dnvm list
 >        1.0.0-rc1-update1    coreclr x64          linux
 > 
 > 
-
--------------------- End of Information on screen --------------------
+```
 
 If you want to change the runtime:
 ```sh
@@ -185,15 +192,18 @@ Command to launch the web application:
 ```sh
 $ dnx run
 ```
------------------------ Information on the screen -----------------------
+
+
+***Information on the screen***
+
+```
 >
 > root@minibian:/tmp/Home/samples/1.0.0-rc1-update1/HelloWeb$ dnx web
 > Hosting environment: Production
 > Now listening on: http://*:5004
 > Application started. Press Ctrl+C to shut down.
 >
-
--------------------- End of Information on screen --------------------
+```
 
 Now you can experience in your web browser to the IP address of the Raspberry Pi and the port that is listening for example http://192.168.1.68:5004/.
 
